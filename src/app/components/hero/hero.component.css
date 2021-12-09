@@ -1,0 +1,12 @@
+.hero {
+    padding: 2.5rem;
+    height: 50%;
+}
+.hero-title {
+    position: relative;
+    top: 50%;
+}
+.btn {
+    padding: 0.25rem 2.5rem;
+    text-transform: uppercase;
+}

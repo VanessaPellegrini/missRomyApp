@@ -1,0 +1,41 @@
+.benefits {
+    padding: 1.25rem 0;
+    color: var(--color-accent)
+}
+.box {
+    margin-top: 2rem;
+    padding: 1.25rem 2.5rem;
+    background: var(--bg-secondary);
+}
+.icon {
+    display: flex;
+    justify-content: center;
+    transform: scale(1.5);
+    padding-top: .5rem;
+}
+.pText {
+    line-height: 1.5rem;
+    padding-top: 1.8rem;
+}
+.joinUs {
+    margin-top: 2rem;
+    padding: 1.25rem 2.5rem;
+    background: var(--bg-primary);
+}
+.subtitle {
+    font-size: 20px;
+    letter-spacing: 0.05rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+}
+.divBtn {
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+}
+.btn {
+    padding: 0.25rem 3rem;
+    text-transform: uppercase;
+}

@@ -1,0 +1,30 @@
+.plans {
+    padding: 1.25rem 2.5rem;
+    color: var(--color-accent)
+}
+.box {
+    background: var(--color-primary);
+    padding: 2rem 2.5rem;
+    margin-top: 1.5rem;
+}
+.box .section {
+    padding: 1rem 0;
+}
+.box .cardTitle {
+    color: #fff;
+    font-weight: 500;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+}
+.divBtn {
+    display: flex;
+    justify-content: center;
+    padding: 3rem 0 2rem 0;
+}
+.btn {
+    padding: 0.25rem 2.5rem;
+    text-transform: uppercase;
+    border-color: var(--color-primary);
+    border-width: 0.15rem;
+}

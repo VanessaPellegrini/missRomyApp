@@ -1,0 +1,15 @@
+<mat-toolbar class="toolbar" color="primary">
+    <mat-toolbar-row>
+        <span>MissRomy</span>
+        <span class="spacer"></span>
+        <button mat-icon-button (click)="activeMenu(true)">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <ul class="navigation" *ngIf="active">
+            <button class="close" (click)="activeMenu(false)" mat-icon-button>
+                <mat-icon>close</mat-icon>
+            </button>
+            <li *ngFor="let item of menu; let i = index"><a>{{ item }}</a></li>
+        </ul>
+    </mat-toolbar-row>
+</mat-toolbar>
