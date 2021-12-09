@@ -40,6 +40,10 @@ $missRomy-theme: mat.define-light-theme((
 
   --color-accent: hsl(0, 0%, 62%);
 }
+.pageSection{
+  padding: 1.25rem 2.5rem;
+  color: var(--color-accent)
+}
 .title {
   display: flex;
   justify-content: center;

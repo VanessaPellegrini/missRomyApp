@@ -1,1 +1,21 @@
-<p>contact works!</p>
+<div class="pageSection">
+    <div class="contactTitle">
+        <p>Dejanos tus datos y te contactaremos</p>
+    </div>
+    <div class="form">
+        <mat-form-field appearance="outline" class="inputForm">
+            <mat-label>Nombre</mat-label>
+            <input matInput placeholder="Nombre">
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="inputForm">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="email@ejemplo.com" [formControl]="email" required >
+            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="inputForm">
+            <mat-label>N° movil</mat-label>
+            <input matInput placeholder="+569 xxxx xxxx">
+        </mat-form-field>
+        <button class="btn" mat-flat-button color="primary">Contactame</button>
+    </div>
+</div>
