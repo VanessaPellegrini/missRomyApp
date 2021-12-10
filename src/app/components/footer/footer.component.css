@@ -1,0 +1,53 @@
+.box1 {
+    padding: 1rem 2rem;
+}
+.mark {
+    display: flex;
+    align-items: center;
+}
+.mark p {
+    color: var(--color-primary);
+    font-weight: 600;
+    letter-spacing: 0.02rem;
+    padding-left: 1.5rem;
+    margin-top: 0.4rem;
+    margin-bottom: 0;
+}
+.mark .icon {
+    font-size: 30px;
+}
+.pText {
+    line-height: 1.5rem;
+    padding-top: 1.8rem;
+    color: var(--color-accent);
+}
+.box2 {
+    background: var(--color-primary);
+    padding: 0.2rem 2rem 2rem 2rem;
+    color: var(--bg-secondary);
+}
+ul {
+    padding: 0;
+}
+.box2 li {
+    list-style: none;
+}
+.rrss {
+    display:flex;
+    align-items: flex-end;
+}
+.rrss p {
+    padding: 0 1rem;
+    margin-bottom: 0;
+}
+.end {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+}
+.end p {
+    margin: 0;
+    color: var(--color-primary);
+    font-weight: 500;
+    letter-spacing: 0.02rem;
+}
