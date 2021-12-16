@@ -7,6 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
+  footer: string[] = [
+    'Necesitas ayuda?',
+    'correo@correo.cl',
+    'Contactanos',
+    '+569 xxxx xxxx'
+  ]
+
   constructor() { }
 
   ngOnInit(): void {

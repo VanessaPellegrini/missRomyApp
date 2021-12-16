@@ -2,16 +2,16 @@
     <div class="title">
         <p>Testimonios</p>
     </div>
-    <div class="box">
+    <div class="box" *ngFor="let testimonial of testimonials">
         <div >
-            <mat-icon class="icon" color="primary">account_circle</mat-icon>
+            <mat-icon class="icon" color="primary">{{ testimonial.icon }}</mat-icon>
         </div>
         <div>
             <div class="textBox">
-                <p class="userBox">Name Surname</p>
-                <small>1h ago</small>
+                <p class="userBox">{{ testimonial.name }}</p>
+                <small>{{ testimonial.time }}</small>
             </div>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint impedit saepe excepturi voluptatum. </p>
+            <p>{{ testimonial.body }}</p>
         </div>
     </div>
 </div>

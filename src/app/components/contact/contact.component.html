@@ -2,10 +2,10 @@
     <div class="contactTitle">
         <p>Dejanos tus datos y te contactaremos</p>
     </div>
-    <div class="form">
+    <form class="form" [formGroup]="contactForm">
         <mat-form-field appearance="outline" class="inputForm">
             <mat-label>Nombre</mat-label>
-            <input matInput placeholder="Nombre">
+            <input matInput placeholder="Nombre" [formControl]="name">
         </mat-form-field>
         <mat-form-field appearance="outline" class="inputForm">
             <mat-label>Email</mat-label>
@@ -14,8 +14,8 @@
         </mat-form-field>
         <mat-form-field appearance="outline" class="inputForm">
             <mat-label>N° movil</mat-label>
-            <input matInput placeholder="+569 xxxx xxxx">
+            <input matInput placeholder="+569 xxxx xxxx" [formControl]="phone">
         </mat-form-field>
-        <button class="btn" mat-flat-button color="primary">Contactame</button>
-    </div>
+        <button class="btn" type="submit" (click)=send() mat-flat-button color="primary">Contactame</button>
+    </form>
 </div>

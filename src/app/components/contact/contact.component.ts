@@ -1,5 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl, Validators} from '@angular/forms';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
+import { SendMailService } from '../../services/send-mail.service';
+
+interface Datos {
+  name: string,
+  email: string,
+  phone: string
+}
 
 @Component({
   selector: 'app-contact',
@@ -8,13 +15,38 @@ import {FormControl, Validators} from '@angular/forms';
 })
 export class ContactComponent implements OnInit {
 
-  name = new FormControl('', [Validators.required]);
-  email = new FormControl('', [Validators.required, Validators.email]);
-  phone = new FormControl('', [Validators.required, Validators.pattern(/[0-9]/)]);
+  contactForm: FormGroup ;  
+  name: FormControl;
+  email: FormControl;
+  phone: FormControl;
 
-  constructor() { }
+  constructor(
+    private sendMail: SendMailService
+  ) { 
+    this.name = new FormControl('', [Validators.required]);
+    this.email = new FormControl('', [Validators.required, Validators.email]);
+    this.phone = new FormControl('', [Validators.required, Validators.pattern(/[0-9+]/)]);
+    this.contactForm = new FormGroup({
+      name: this.name,
+      email: this.email,
+      phone: this.phone,
+    });
+  }
 
-  ngOnInit(): void {
+  ngOnInit() {
+
+  }
+
+  send(){
+    const data: Datos = {
+      name: this.name.value,
+      email: this.email.value,
+      phone: this.phone.value
+    }
+    return this.sendMail.send( data )
+      .subscribe((res: any) => {
+        console.log(res);
+      });
   }
 
   getErrorMessage() {

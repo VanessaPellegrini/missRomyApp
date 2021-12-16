@@ -2,18 +2,20 @@
     <div class="title">
         <p>Planes</p>
     </div>
-    <div class="box">
-        <div class="cardTitle">
-            <p>Plan S</p>
+    <div *ngFor="let plan of plans">
+        <div class="box">
+            <div class="cardTitle">
+                <p>{{ plan.title }}</p>
+            </div>
+            <div class="section">
+                <p>{{ plan.body }}</p>
+            </div>
+            <div class="cardTitle">
+                <p>{{ plan.price }}</p>
+            </div>
         </div>
-        <div class="section">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint impedit saepe excepturi voluptatum. </p>
+        <div class="divBtn">
+            <button class="btn" mat-stroked-button color="primary">Normal</button>
         </div>
-        <div class="cardTitle">
-            <p>$120.000</p>
-        </div>
-    </div>
-    <div class="divBtn">
-        <button class="btn" mat-stroked-button color="primary">Normal</button>
     </div>
 </div>

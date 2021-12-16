@@ -2,8 +2,8 @@
     <div class="title">
         <p>Método de enseñanza</p>
     </div>
-    <div class="text">
-        <p class="subtext">Large Body</p>
-        <p class="subheader">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus libero harum dignissimos culpa sed quia labore, consequuntur iste earum eveniet, dolores at laudantium a, maxime hic suscipit atque optio commodi.</p>
+    <div class="text" *ngFor="let text of texts">
+        <p class="subtext">{{ text.title }}</p>
+        <p class="subheader">{{ text.body }}</p>
     </div>
 </div>
