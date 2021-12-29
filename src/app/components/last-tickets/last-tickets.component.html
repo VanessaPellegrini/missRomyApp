@@ -1,0 +1,18 @@
+<div class="section">
+    <h3>Ultimos ticket soporte</h3>
+    <div class="box" *ngFor="let item of data">
+        <div class="innerBox">
+            <mat-icon class="icon" color="primary">account_circle</mat-icon>
+            <div>
+                <div class="textBox">
+                    <span class="userBox">{{ item.user }}</span>
+                    <small>{{ item.date }}</small>
+                </div>
+                <p>{{ item.report }}</p>
+            </div>
+        </div>
+        <div class="btn">
+            <button mat-flat-button color="primary">Responder</button>
+        </div>
+    </div>
+</div>

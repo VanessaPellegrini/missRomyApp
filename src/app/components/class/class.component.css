@@ -16,7 +16,7 @@
 }
 .info{
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     margin: 0.3rem;
 }
 .info p{
@@ -25,7 +25,7 @@
 }
 .btnBox{
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
 }
 .btn{
     margin-top: 0.5rem;

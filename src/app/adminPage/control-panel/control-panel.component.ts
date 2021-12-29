@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Program } from '../../components/class/class.component'
 import { History } from '../../components/class-history/class-history.component';
+import { Report } from '../../components/last-tickets/last-tickets.component';
 
 @Component({
   selector: 'app-control-panel',
@@ -37,6 +38,13 @@ export class ControlPanelComponent implements OnInit {
       day: 'dia',
       month: 'mes',
       year: 'anio' 
+    }
+  ]
+  report: Report[] = [
+    {
+      user: 'Usuario',
+      date: 'dia del reporte',
+      report: 'comentarios, motivos...'
     }
   ]
 

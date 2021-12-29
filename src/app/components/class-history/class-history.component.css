@@ -15,3 +15,6 @@
     color: var(--color-accent);
     font-weight: 600;
 }
+mat-panel-title {
+    color: var(--color-primary);
+}

@@ -1,0 +1,43 @@
+.section {
+    padding: 1rem;
+}
+.section h3 {
+    margin: 0;
+    color: var(--color-primary);
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+.icon {
+    font-size: 30px;
+    padding-right: 1.5rem;
+}
+.box {
+    margin-top: 1rem;
+    padding: 1.5rem;
+    background: var(--bg-secondary);
+}
+.innerBox {
+    display: flex;
+}
+.innerBox p, small {
+    color: var(--color-accent);
+}
+.textBox {
+    display: flex;
+    margin-top: 0.3rem;
+    padding-bottom: 1rem;
+}
+.userBox {
+    color: var(--color-primary);
+    font-weight: 600;
+    font-size: 15px;
+    padding-right: 1rem;
+}
+.btn {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 1rem;
+}
+.btn button {
+    padding: 0 2rem;
+}

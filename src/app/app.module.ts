@@ -22,6 +22,8 @@ import { ControlPanelComponent } from './adminPage/control-panel/control-panel.c
 import { OptionsComponent } from './components/options/options.component';
 import { ClassComponent } from './components/class/class.component';
 import { ClassHistoryComponent } from './components/class-history/class-history.component';
+import { StudentsListComponent } from './components/students-list/students-list.component';
+import { LastTicketsComponent } from './components/last-tickets/last-tickets.component';
 
 
 
@@ -41,7 +43,9 @@ import { ClassHistoryComponent } from './components/class-history/class-history.
     ControlPanelComponent,
     OptionsComponent,
     ClassComponent,
-    ClassHistoryComponent
+    ClassHistoryComponent,
+    StudentsListComponent,
+    LastTicketsComponent
   ],
   imports: [
     BrowserModule,
