@@ -1,0 +1,17 @@
+.classSection{
+    padding: 0 0.7rem 0.7rem;
+}
+.box {
+    padding: 1rem;
+    background: var(--bg-primary);
+}
+.box .boxTitle {
+    color: var(--color-accent);
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0;
+}
+.box p {
+    color: var(--color-accent);
+    font-weight: 600;
+}

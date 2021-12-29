@@ -1,0 +1,33 @@
+.classSection{
+    padding: 0 0.7rem 0.7rem;
+}
+.box {
+    padding: 1rem;
+    background: var(--bg-primary);
+}
+.box .boxTitle {
+    color: var(--color-accent);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.items {
+    color: var(--color-primary);
+    font-weight: 500;
+}
+.info{
+    display: flex;
+    justify-content: start;
+    margin: 0.3rem;
+}
+.info p{
+    margin: 0;
+    padding: 0.2rem 0 0 1rem;
+}
+.btnBox{
+    display: flex;
+    justify-content: end;
+}
+.btn{
+    margin-top: 0.5rem;
+    width: 50%;
+}

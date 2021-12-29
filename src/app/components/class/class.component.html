@@ -1,0 +1,22 @@
+<div *ngFor="let item of data" class="classSection">
+    <div class="box">
+        <p class="boxTitle">ramo: {{ item.course }}</p>
+        <div class="items">
+            <div class="info">
+                <mat-icon>watch_later</mat-icon>
+                <p>Horario: {{ item.hour }} </p>
+            </div>
+            <div class="info">
+                <mat-icon>calendar_month</mat-icon>
+                <p>Dia: {{ item.date }}</p>
+            </div>
+            <div class="info">
+                <mat-icon>place</mat-icon>
+                <p>Modalidad: {{ item.mode }}</p>
+            </div>
+        </div>
+        <div class="btnBox">
+            <button class="btn" mat-flat-button color="primary">Modificar</button>
+        </div>
+    </div>
+</div>

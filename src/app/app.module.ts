@@ -17,6 +17,11 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeroComponent } from './components/hero/hero.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AboutComponent } from './components/about/about.component';
+import { NavbarBaseComponent } from './components/shared/navbar-base/navbar-base.component';
+import { ControlPanelComponent } from './adminPage/control-panel/control-panel.component';
+import { OptionsComponent } from './components/options/options.component';
+import { ClassComponent } from './components/class/class.component';
+import { ClassHistoryComponent } from './components/class-history/class-history.component';
 
 
 
@@ -31,7 +36,12 @@ import { AboutComponent } from './components/about/about.component';
     ContactComponent,
     FooterComponent,
     HeroComponent,
-    AboutComponent
+    AboutComponent,
+    NavbarBaseComponent,
+    ControlPanelComponent,
+    OptionsComponent,
+    ClassComponent,
+    ClassHistoryComponent
   ],
   imports: [
     BrowserModule,

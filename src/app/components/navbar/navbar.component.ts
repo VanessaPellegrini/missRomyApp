@@ -7,23 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
   
-  active: boolean = false;
   menu: string[] = [
     'inicio',
     'beneficios',
     'planes',
     'testimonios',
     'contacto'
-  ]
+  ];
+  title: string = 'MissRomy'
 
   constructor() { }
 
   ngOnInit(): void {
-  }
-
-  activeMenu(bool:boolean){
-    return this.active = bool
-    
   }
 
 }

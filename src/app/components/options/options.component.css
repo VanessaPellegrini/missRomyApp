@@ -1,0 +1,13 @@
+.buttonControl{
+    margin: 0.5rem 0;
+    padding: 0.5rem 1rem;
+    width: 100%;
+}
+.buttonControl div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.buttonControl p {
+    margin: 0;
+}
