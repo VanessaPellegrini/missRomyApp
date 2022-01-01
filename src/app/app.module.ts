@@ -24,6 +24,9 @@ import { ClassComponent } from './components/class/class.component';
 import { ClassHistoryComponent } from './components/class-history/class-history.component';
 import { StudentsListComponent } from './components/students-list/students-list.component';
 import { LastTicketsComponent } from './components/last-tickets/last-tickets.component';
+import { CrearClaseComponent } from './components/crear-clase/crear-clase.component';
+import { CrearUsuarioComponent } from './components/crear-usuario/crear-usuario.component';
+import { CpanelAdminComponent } from './components/cpanel-admin/cpanel-admin.component';
 
 
 
@@ -45,7 +48,10 @@ import { LastTicketsComponent } from './components/last-tickets/last-tickets.com
     ClassComponent,
     ClassHistoryComponent,
     StudentsListComponent,
-    LastTicketsComponent
+    LastTicketsComponent,
+    CrearClaseComponent,
+    CrearUsuarioComponent,
+    CpanelAdminComponent
   ],
   imports: [
     BrowserModule,

@@ -1,7 +1,7 @@
 <div class="pageSection">
-    <button *ngFor="let item of items" class="buttonControl" mat-flat-button color="primary">
+    <button *ngFor="let item of items" [routerLink]="item.link" class="buttonControl" mat-flat-button color="primary">
         <div>
-            <p>{{ item }}</p>
+            <p>{{ item.option }}</p>
             <mat-icon>arrow_forward</mat-icon>
         </div>
     </button>
