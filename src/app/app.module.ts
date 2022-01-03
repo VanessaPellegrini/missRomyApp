@@ -8,7 +8,6 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './landingPage/home/home.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
 import { BenefitsComponent } from './components/benefits/benefits.component';
 import { PlansComponent } from './components/plans/plans.component';
 import { TestimonialsComponent } from './components/testimonials/testimonials.component';
@@ -34,7 +33,6 @@ import { CpanelAdminComponent } from './components/cpanel-admin/cpanel-admin.com
   declarations: [
     AppComponent,
     HomeComponent,
-    NavbarComponent,
     BenefitsComponent,
     PlansComponent,
     TestimonialsComponent,
