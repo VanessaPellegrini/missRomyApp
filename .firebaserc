@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "missromy-fcccb"
+  },
+  "targets": {
+    "missromy-fcccb": {
+      "hosting": {
+        "missRomy": [
+          "missromy"
+        ]
+      }
+    }
   }
 }

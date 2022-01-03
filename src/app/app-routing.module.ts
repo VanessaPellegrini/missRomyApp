@@ -1,32 +1,39 @@
-import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './landingPage/home/home.component';
-import { ControlPanelComponent } from './adminPage/control-panel/control-panel.component';
-import { CpanelAdminComponent } from './components/cpanel-admin/cpanel-admin.component';
-import { CrearClaseComponent } from "./components/crear-clase/crear-clase.component";
-import { CrearUsuarioComponent } from "./components/crear-usuario/crear-usuario.component";
+import {
+  canActivate,
+  redirectLoggedInTo,
+  redirectUnauthorizedTo,
+} from '@angular/fire/auth-guard';
+
+import { NgModule } from '@angular/core';
+
+const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['']);
+const redirectLoggedInToHome = () => redirectLoggedInTo(['dashboard']);
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent},
-  { path: 'control-panel', 
-    component: ControlPanelComponent,
-    children: [
-      { path: '', component: CpanelAdminComponent},
-      { path: 'crear-clase', component: CrearClaseComponent},
-      { path: 'crear-usuario', component: CrearUsuarioComponent},
-    ]
+  {
+    path: '',
+    loadChildren: () =>
+      import('./features/auth/auth.module').then((m) => m.AuthModule),
+    ...canActivate(redirectLoggedInToHome),
   },
-  
-/*   { path: 'control-panel/asignar', component: ControlPanelComponent},
-  { path: 'control-panel/cargar-contenido', component: ControlPanelComponent}, */
-
-  { path: '', pathMatch: 'full', redirectTo: 'home'},
-  { path: '**', pathMatch: 'full', redirectTo: 'home'},
-
+  {
+    path: 'dashboard',
+    loadChildren: () =>
+      import('./features/dashboard/dashboard.module').then(
+        (m) => m.DashboardModule
+      ),
+    ...canActivate(redirectUnauthorizedToLogin),
+  },
+  {
+    path: '**',
+    redirectTo: '',
+    pathMatch: 'full',
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

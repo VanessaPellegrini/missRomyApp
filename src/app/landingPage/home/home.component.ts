@@ -6,17 +6,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  
-  menu: string[] = [
-    'inicio',
-    'beneficios',
-    'planes',
-    'testimonios',
-    'contacto'
+
+  menu: any[] = [
+    { option: 'inicio', link: 'home'},
+    { option: 'inicio sesión', link: 'login' },
+    { option: 'beneficios', link: '' },
+    { option: 'planes', link: ''},
+    { option: 'testimonios', link: ''},
+    { option: 'contacto', link: ''}
   ];
+
+
   title: string = 'MissRomy'
 
-  constructor() { }
+  constructor() {
+    
+   }
 
   ngOnInit(): void {
   }

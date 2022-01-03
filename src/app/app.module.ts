@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from './material/material.module';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { AngularFireAuthModule } from "@angular/fire/compat/auth";
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './landingPage/home/home.component';
@@ -26,6 +27,14 @@ import { LastTicketsComponent } from './components/last-tickets/last-tickets.com
 import { CrearClaseComponent } from './components/crear-clase/crear-clase.component';
 import { CrearUsuarioComponent } from './components/crear-usuario/crear-usuario.component';
 import { CpanelAdminComponent } from './components/cpanel-admin/cpanel-admin.component';
+import { LoginComponent } from './login/login.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAnalytics,getAnalytics,ScreenTrackingService,UserTrackingService } from '@angular/fire/analytics';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+//import { LoginPageComponent } from './pages/login-page/login-page.component';
+//import { LoginFormComponent } from './components/login-form/login-form.component';
 
 
 
@@ -49,7 +58,8 @@ import { CpanelAdminComponent } from './components/cpanel-admin/cpanel-admin.com
     LastTicketsComponent,
     CrearClaseComponent,
     CrearUsuarioComponent,
-    CpanelAdminComponent
+    CpanelAdminComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -59,8 +69,15 @@ import { CpanelAdminComponent } from './components/cpanel-admin/cpanel-admin.com
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAnalytics(() => getAnalytics()),
+    provideAuth(() => getAuth()),
+    provideFirestore(() => getFirestore()),
+    AngularFireAuthModule,
   ],
-  providers: [],
+  providers: [
+    ScreenTrackingService,UserTrackingService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

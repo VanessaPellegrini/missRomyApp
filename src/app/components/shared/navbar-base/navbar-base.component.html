@@ -10,7 +10,9 @@
             <button class="close" (click)="activeMenu(false)" mat-icon-button>
                 <mat-icon>close</mat-icon>
             </button>
-            <li *ngFor="let item of items; let i = index"><a>{{ item }}</a></li>
+            <li *ngFor="let item of items; let i = index" >
+                <a [routerLink]="item.link">{{ item.option }}</a>
+            </li>
         </ul>
     </mat-toolbar-row>
 </mat-toolbar>
