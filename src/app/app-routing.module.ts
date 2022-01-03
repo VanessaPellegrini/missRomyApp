@@ -6,7 +6,6 @@ import {
 } from '@angular/fire/auth-guard';
 
 import { NgModule } from '@angular/core';
-import { LandingModule } from './features/landing/landing.module';
 
 const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['']);
 const redirectLoggedInToHome = () => redirectLoggedInTo(['dashboard']);
@@ -15,13 +14,13 @@ const redirectLandingToHome = () => redirectLoggedInTo(['landing']);
 const routes: Routes = [
   {
     path: '', loadChildren: () =>
-      import('./features/landing/landing.module').then(m => m.LandingModule)
+      import('./features/landing/landing.module').then((m) => m.LandingModule)
   },
   {
-    path: 'auth',
+    path: 'login',
     loadChildren: () =>
       import('./features/auth/auth.module').then((m) => m.AuthModule),
-    ...canActivate(redirectLoggedInToHome),
+    //...canActivate(redirectLoggedInToHome),
   },
   {
     path: 'dashboard',
@@ -29,7 +28,7 @@ const routes: Routes = [
       import('./features/dashboard/dashboard.module').then(
         (m) => m.DashboardModule
       ),
-    ...canActivate(redirectUnauthorizedToLogin),
+    //...canActivate(redirectUnauthorizedToLogin),
   },
   {
     path: '**',

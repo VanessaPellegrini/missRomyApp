@@ -1,16 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import { Program } from '../../components/class/class.component'
-import { History } from '../../components/class-history/class-history.component';
+import { Program } from '../../components/class/class.component';
 import { Report } from '../../components/last-tickets/last-tickets.component';
 import { Options } from '../../components/options/options.component';
+import { History } from '../../components/class-history/class-history.component';
 
 @Component({
-  selector: 'app-cpanel-admin',
-  templateUrl: './cpanel-admin.component.html',
-  styleUrls: ['./cpanel-admin.component.css']
+  selector: 'app-admin-page',
+  templateUrl: './admin-page.component.html',
+  styleUrls: ['./admin-page.component.css']
 })
-export class CpanelAdminComponent implements OnInit {
-  
+export class AdminPageComponent implements OnInit {
+
   menu: Options[] = [
     { option: 'Crear Clase', link: 'crear-clase'},
     { option: 'Crear Ususario', link: 'crear-usuario' },
@@ -46,6 +46,7 @@ export class CpanelAdminComponent implements OnInit {
       report: 'comentarios, motivos...'
     }
   ]
+
 
   constructor() { }
 

@@ -1,14 +1,14 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-import { AppRoutingModule } from './app-routing.module';
+import { getAuth, provideAuth } from '@angular/fire/auth';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 
 import { AppComponent } from './app.component';
-import { LandingModule } from './features/landing/landing.module';
-
-
-
+import { AppRoutingModule } from './app-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { environment } from '../environments/environment';
+import { HttpClientModule } from '@angular/common/http';
+import { MaterialModule } from './material/material.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -16,7 +16,10 @@ import { LandingModule } from './features/landing/landing.module';
     AppRoutingModule,
     BrowserModule,
     BrowserAnimationsModule,
-    LandingModule
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth()),
+    HttpClientModule,
+    MaterialModule
   ],
   bootstrap: [AppComponent]
 })
