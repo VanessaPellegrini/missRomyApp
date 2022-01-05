@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { MaterialModule } from '../../material/material.module';
 import { DashboardRoutingModule } from './dashboard-routing.module';
@@ -12,6 +13,9 @@ import { ClassHistoryComponent } from './components/class-history/class-history.
 import { OptionsComponent } from './components/options/options.component';
 import { ClassComponent } from './components/class/class.component';
 import { LastTicketsComponent } from './components/last-tickets/last-tickets.component';
+import { CrearClaseComponent } from './components/crear-clase/crear-clase.component';
+import { CrearUsuarioComponent } from './components/crear-usuario/crear-usuario.component';
+import { SharedModule } from '../../shared/shared.module';
 
 
 @NgModule({
@@ -23,12 +27,17 @@ import { LastTicketsComponent } from './components/last-tickets/last-tickets.com
     ClassHistoryComponent,
     OptionsComponent,
     ClassComponent,
-    LastTicketsComponent
+    LastTicketsComponent,
+    CrearClaseComponent,
+    CrearUsuarioComponent,
   ],
   imports: [
     CommonModule,
     DashboardRoutingModule,
     MaterialModule,
+    FormsModule,
+    ReactiveFormsModule,
+    SharedModule
   ]
 })
 export class DashboardModule { }

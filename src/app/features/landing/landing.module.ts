@@ -10,11 +10,10 @@ import { HomePageComponent } from 'src/app/features/landing/pages/home-page/home
 import { BenefitsComponent } from 'src/app/features/landing/components/benefits/benefits.component';
 import { PlansComponent } from 'src/app/features/landing/components/plans/plans.component';
 import { TestimonialsComponent } from 'src/app/features/landing/components/testimonials/testimonials.component';
-import { FooterComponent } from 'src/app/shared/footer/footer.component';
 import { HeroComponent } from 'src/app/features/landing/components/hero/hero.component';
 import { AboutComponent } from 'src/app/features/landing/components/about/about.component';
-import { NavbarBaseComponent } from 'src/app/shared/navbar-base/navbar-base.component';
 import { ContactComponent } from 'src/app/features/landing/components/contact/contact.component';
+import { SharedModule } from '../../shared/shared.module';
 
 
 
@@ -26,10 +25,8 @@ import { ContactComponent } from 'src/app/features/landing/components/contact/co
     PlansComponent,
     TestimonialsComponent,
     ContactComponent,
-    FooterComponent,
     HeroComponent,
     AboutComponent,
-    NavbarBaseComponent,
   ],
   imports: [
     CommonModule,
@@ -38,6 +35,7 @@ import { ContactComponent } from 'src/app/features/landing/components/contact/co
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    SharedModule
   ]
 })
 export class LandingModule { }

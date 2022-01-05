@@ -1,1 +1,16 @@
-<p>crear-clase works!</p>
+<div class=formSection>
+    <form class="form" [formGroup]="addClassForm">
+        <mat-form-field appearance="outline" class="inputForm">
+            <mat-label>Ramo</mat-label>
+            <input matInput placeholder="Ramo" [formControl]="asignature">
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="inputForm">
+            <mat-label>Ramo</mat-label>
+            <input matInput placeholder="Teacher" [formControl]="teacher">
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="inputForm">
+            <mat-label>Ramo</mat-label>
+            <input matInput placeholder="Link" [formControl]="link">
+        </mat-form-field>
+    </form>
+</div>

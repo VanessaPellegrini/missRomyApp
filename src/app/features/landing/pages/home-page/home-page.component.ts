@@ -15,8 +15,6 @@ export class HomePageComponent implements OnInit {
     { option: 'testimonios', link: ''},
     { option: 'contacto', link: ''}
   ];
-
-
   title: string = 'MissRomy'
 
   constructor() {

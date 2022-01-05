@@ -10,6 +10,7 @@ import { environment } from '../environments/environment';
 import { HttpClientModule } from '@angular/common/http';
 import { MaterialModule } from './material/material.module';
 
+
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -19,7 +20,7 @@ import { MaterialModule } from './material/material.module';
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     HttpClientModule,
-    MaterialModule
+    MaterialModule,
   ],
   bootstrap: [AppComponent]
 })

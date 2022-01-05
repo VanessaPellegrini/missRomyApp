@@ -10,7 +10,14 @@ import { Router } from '@angular/router';
 })
 export class DashboardComponent implements OnInit {
   constructor(private authService: AuthService, private router: Router) {}
+  menu: any[] = [
+    { option: 'crear clase', link: 'crear-clase'},
+    { option: 'crea usuario', link: 'crear-usuario'},
+    { option: 'cerrar sesion', link: this.logout}
+  ];
 
+
+  title: string = 'Bienvenido usuario'
   ngOnInit(): void {}
 
   logout() {

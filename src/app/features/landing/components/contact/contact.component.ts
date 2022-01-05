@@ -15,7 +15,7 @@ interface Datos {
 })
 export class ContactComponent implements OnInit {
 
-  contactForm: FormGroup ;  
+  contactForm: FormGroup;  
   name: FormControl;
   email: FormControl;
   phone: FormControl;
