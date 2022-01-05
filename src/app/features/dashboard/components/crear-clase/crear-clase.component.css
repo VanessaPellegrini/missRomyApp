@@ -1,8 +1,22 @@
+.box {
+    padding: 0.6rem;
+    background: var(--bg-forms);
+    display: flex;
+    justify-content: center;
+    color: white;
+    text-transform: uppercase;
+}
+.box h3 {
+    margin: 0;
+}
 .formSection {
     padding: 1rem;
 }
-.form {
-    padding-top: 2rem;
+.form p {
+    color: var(--color-primary);
+}
+.form .btn {
+   padding: 1rem; 
 }
 .inputForm {
     width: 100%;

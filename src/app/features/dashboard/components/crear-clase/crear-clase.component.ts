@@ -32,10 +32,10 @@ export class CrearClaseComponent implements OnInit {
       asignature: this.asignature = new FormControl('', [Validators.required]),
       teacher: this.teacher = new FormControl('', [Validators.required]),
       link: this.link = new FormControl('', [Validators.required]),
-      /* number: this.number = new FormControl('', [Validators.required]),
+      number: this.number = new FormControl('', [Validators.required]),
       group: this.group = new FormControl('', [Validators.required]),
       hour: this.hour = new FormControl('', [Validators.required]),
-      day: this.day = new FormControl('', [Validators.required]), */
+      day: this.day = new FormControl('', [Validators.required]),
     })
   }
 

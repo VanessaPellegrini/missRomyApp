@@ -16,6 +16,7 @@ import { LastTicketsComponent } from './components/last-tickets/last-tickets.com
 import { CrearClaseComponent } from './components/crear-clase/crear-clase.component';
 import { CrearUsuarioComponent } from './components/crear-usuario/crear-usuario.component';
 import { SharedModule } from '../../shared/shared.module';
+import { CpanelComponent } from './pages/cpanel/cpanel.component';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { SharedModule } from '../../shared/shared.module';
     LastTicketsComponent,
     CrearClaseComponent,
     CrearUsuarioComponent,
+    CpanelComponent,
   ],
   imports: [
     CommonModule,

@@ -1,3 +1,6 @@
+<div class="box">
+    <h3>Crear Clase</h3>
+</div>
 <div class=formSection>
     <form class="form" [formGroup]="addClassForm">
         <mat-form-field appearance="outline" class="inputForm">
@@ -5,12 +8,31 @@
             <input matInput placeholder="Ramo" [formControl]="asignature">
         </mat-form-field>
         <mat-form-field appearance="outline" class="inputForm">
-            <mat-label>Ramo</mat-label>
-            <input matInput placeholder="Teacher" [formControl]="teacher">
+            <mat-label>Profesor</mat-label>
+            <input matInput placeholder="Profesor" [formControl]="teacher">
         </mat-form-field>
         <mat-form-field appearance="outline" class="inputForm">
-            <mat-label>Ramo</mat-label>
+            <mat-label>Link</mat-label>
             <input matInput placeholder="Link" [formControl]="link">
         </mat-form-field>
+        <p>Nivel</p>
+        <mat-form-field appearance="outline" class="inputForm">
+            <mat-label>Numero</mat-label>
+            <input matInput placeholder="Numero" [formControl]="number">
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="inputForm">
+            <mat-label>Grupo</mat-label>
+            <input matInput placeholder="Grupo" [formControl]="group">
+        </mat-form-field>
+        <p>Horario</p>
+        <mat-form-field appearance="outline" class="inputForm">
+            <mat-label>Hora</mat-label>
+            <input matInput placeholder="Hora" [formControl]="hour">
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="inputForm">
+            <mat-label>Dia</mat-label>
+            <input matInput placeholder="Dia" [formControl]="day">
+        </mat-form-field>
+        <button class="btn" type="submit" mat-flat-button color="primary">Crear</button>
     </form>
 </div>
