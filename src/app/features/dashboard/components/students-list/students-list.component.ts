@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-students-list',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StudentsListComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute,
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  follow() {
+    this.router.navigate(['lista-estudiantes'], { relativeTo: this.route });
   }
 
 }

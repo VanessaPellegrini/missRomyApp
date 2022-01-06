@@ -17,6 +17,8 @@ import { CrearClaseComponent } from './components/crear-clase/crear-clase.compon
 import { CrearUsuarioComponent } from './components/crear-usuario/crear-usuario.component';
 import { SharedModule } from '../../shared/shared.module';
 import { CpanelComponent } from './pages/cpanel/cpanel.component';
+import { CardStudentComponent } from './components/card-student/card-student.component';
+import { ViewStudenListComponent } from './pages/view-studen-list/view-studen-list.component';
 
 
 @NgModule({
@@ -32,6 +34,8 @@ import { CpanelComponent } from './pages/cpanel/cpanel.component';
     CrearClaseComponent,
     CrearUsuarioComponent,
     CpanelComponent,
+    CardStudentComponent,
+    ViewStudenListComponent,
   ],
   imports: [
     CommonModule,

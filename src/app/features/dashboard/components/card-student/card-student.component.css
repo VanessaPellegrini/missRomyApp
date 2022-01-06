@@ -1,0 +1,23 @@
+.card{
+    background: var(--bg-secondary);
+    padding: 1rem;
+    margin-top: 1rem;
+}
+.card p, mat-panel-title{
+    color: var(--color-primary);
+    font-weight: 500;
+}
+.card mat-icon {
+    font-size: 30px;
+    padding-right: 1.5rem;
+}
+.box{
+    display: flex;
+    align-items: center;
+}
+.box p {
+    margin: 0;
+    color: var(--color-primary);
+    padding: 0 0 0.3rem 0.5rem;
+    font-weight: 600;
+}

@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard.component';
-import { CrearUsuarioComponent } from './components/crear-usuario/crear-usuario.component';
-import { CrearUsuarioModule } from './components/crear-usuario/crear-usuario.module';
 
 const routes: Routes = [
   { path: '', component: DashboardComponent,
@@ -19,10 +17,12 @@ const routes: Routes = [
         loadChildren: () => 
           import('./components/crear-usuario/crear-usuario.module').then((m) => m.CrearUsuarioModule)
       },
+      { path: 'lista-estudiantes', 
+      loadChildren: () => 
+        import('./pages/view-studen-list/view-studen-list.module').then((m) => m.ViewStudenListModule)
+    },
     ]
   },
-  { path: 'crear-usuario', component: CrearUsuarioComponent },
-
 ];
 
 @NgModule({

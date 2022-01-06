@@ -1,0 +1,23 @@
+<div class="card" *ngFor="let card of cards">
+    <div class="box">
+        <div>
+            <mat-icon class="icon" color="primary">account_circle</mat-icon>
+        </div>
+        <p>{{ card.name }}</p>
+    </div>
+    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+        <mat-expansion-panel-header >
+            <mat-panel-title >
+                Detalles
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>Nombre: {{ card.name }}</p>
+        <p>Nivel: {{ card.level }}</p>
+        <p>Correo: {{ card.email }}</p>
+        <p>Ramos inscriptos: 
+            <mat-chip-list  aria-label="Asignatures">
+                <mat-chip *ngFor="let item of card.asignature" color="primary" selected>{{ item }}</mat-chip>
+            </mat-chip-list>
+        </p>
+    </mat-expansion-panel>
+</div>
