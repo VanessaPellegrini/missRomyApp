@@ -16,7 +16,11 @@
     color: var(--color-primary);
 }
 .form .btn {
-   padding: 1rem; 
+    padding: .2rem 3rem; 
+}
+.form div {
+    display: flex;
+    justify-content: flex-end;
 }
 .inputForm {
     width: 100%;

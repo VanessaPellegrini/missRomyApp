@@ -33,6 +33,8 @@
             <mat-label>Dia</mat-label>
             <input matInput placeholder="Dia" [formControl]="day">
         </mat-form-field>
-        <button class="btn" type="submit" mat-flat-button color="primary">Crear</button>
+        <div>
+            <button class="btn" type="submit" (click)=send() mat-flat-button color="primary">Crear</button>
+        </div>
     </form>
 </div>

@@ -1,1 +1,60 @@
-<p>crear-usuario works!</p>
+<div class="box">
+    <h3>Crear Usuario</h3>
+</div>
+<div class=formSection>
+    <form class="form" [formGroup]="addUserForm">
+        <mat-form-field appearance="outline" class="inputForm">
+            <mat-label>Nombre</mat-label>
+            <input matInput placeholder="Nombre" [formControl]="name">
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="inputForm">
+            <mat-label>Apellido</mat-label>
+            <input matInput placeholder="Apellido" [formControl]="lastName">
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="inputForm">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Email" [formControl]="email">
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="inputForm">
+            <mat-label>Rut</mat-label>
+            <input matInput placeholder="Rut" [formControl]="rut">
+        </mat-form-field>
+        <p>Direccion</p>
+        <mat-form-field appearance="outline" class="inputForm">
+            <mat-label>Calle</mat-label>
+            <input matInput placeholder="Calle" [formControl]="street">
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="inputForm">
+            <mat-label>Numero</mat-label>
+            <input matInput placeholder="Numero" [formControl]="number">
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="inputForm">
+            <mat-label>Depto</mat-label>
+            <input matInput placeholder="Departamento" [formControl]="apartment">
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="inputForm">
+            <mat-label>Torre</mat-label>
+            <input matInput placeholder="Torre" [formControl]="block">
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="inputForm">
+            <mat-label>Comuna</mat-label>
+            <input matInput placeholder="Comuna" [formControl]="comuna">
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="inputForm">
+            <mat-label>Ciudad</mat-label>
+            <input matInput placeholder="Ciudad" [formControl]="city">
+        </mat-form-field>
+        <p>Nivel</p>
+        <mat-form-field appearance="outline" class="inputForm">
+            <mat-label>Numero</mat-label>
+            <input matInput placeholder="Numero" [formControl]="level">
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="inputForm">
+            <mat-label>Grupo</mat-label>
+            <input matInput placeholder="Grupo" [formControl]="group">
+        </mat-form-field>
+        <div>
+        <button class="btn" type="submit" (click)=send() mat-flat-button color="primary">Crear</button>
+        </div>
+    </form>
+</div>
