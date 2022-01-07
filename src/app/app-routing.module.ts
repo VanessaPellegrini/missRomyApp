@@ -7,7 +7,7 @@ import {
 
 import { NgModule } from '@angular/core';
 
-const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['']);
+const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['login']);
 const redirectLoggedInToHome = () => redirectLoggedInTo(['dashboard']);
 const redirectLandingToHome = () => redirectLoggedInTo(['landing']);
 
@@ -20,7 +20,7 @@ const routes: Routes = [
     path: 'login',
     loadChildren: () =>
       import('./features/auth/auth.module').then((m) => m.AuthModule),
-    //...canActivate(redirectLoggedInToHome),
+    ...canActivate(redirectLoggedInToHome),
   },
   {
     path: 'dashboard',
@@ -28,7 +28,7 @@ const routes: Routes = [
       import('./features/dashboard/dashboard.module').then(
         (m) => m.DashboardModule
       ),
-    //...canActivate(redirectUnauthorizedToLogin),
+    ...canActivate(redirectUnauthorizedToLogin),
   },
 /*   {
     path: '**',

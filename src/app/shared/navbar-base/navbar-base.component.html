@@ -14,5 +14,8 @@
                 <a [routerLink]="item.link" (click)="activeMenu(false)">{{ item.option }}</a>
             </li>
         </ul>
+        <button mat-icon-button (click)="logout()" *ngIf="nameValidator">
+            <mat-icon>logout</mat-icon>
+        </button>
     </mat-toolbar-row>
 </mat-toolbar>
