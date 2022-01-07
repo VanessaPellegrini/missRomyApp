@@ -30,11 +30,11 @@ const routes: Routes = [
       ),
     //...canActivate(redirectUnauthorizedToLogin),
   },
-  {
+/*   {
     path: '**',
     redirectTo: '',
     pathMatch: 'full',
-  },
+  }, */
 ];
 
 @NgModule({

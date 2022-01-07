@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 import { AuthService } from '../../core/services/auth.service';
 import { Router } from '@angular/router';
 
@@ -9,15 +8,20 @@ import { Router } from '@angular/router';
   styleUrls: ['./dashboard.component.css'],
 })
 export class DashboardComponent implements OnInit {
-  constructor(private authService: AuthService, private router: Router) {}
+  constructor(
+    private authService: AuthService, 
+    private router: Router,
+    ) {}
+    
   menu: any[] = [
-    { option: 'crear clase', link: 'crear-clase'},
-    { option: 'crea usuario', link: 'crear-usuario'},
-    { option: 'cerrar sesion', link: this.logout}
+    { option: 'dashboard', link: '/dashboard' },
+    { option: 'crear clase', link: 'crear-clase' },
+    { option: 'crea usuario', link: 'crear-usuario' },
+    { option: 'cerrar sesion', link: this.logout }
   ];
 
+  title: string = 'Bienvenido usuario';
 
-  title: string = 'Bienvenido usuario'
   ngOnInit(): void {}
 
   logout() {

@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { HostListener, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard.component';
 
@@ -20,7 +20,7 @@ const routes: Routes = [
       { path: 'lista-estudiantes', 
       loadChildren: () => 
         import('./pages/view-studen-list/view-studen-list.module').then((m) => m.ViewStudenListModule)
-    },
+      },
     ]
   },
 ];
