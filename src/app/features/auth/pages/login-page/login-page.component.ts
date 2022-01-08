@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./login-page.component.css'],
 })
 export class LoginPageComponent implements OnInit {
+  
   constructor(
     private readonly authService: AuthService,
     private readonly router: Router
@@ -20,7 +21,9 @@ export class LoginPageComponent implements OnInit {
   login(loginData: LoginData) {
     this.authService
       .login(loginData)
-      .then(() => this.router.navigate(['/dashboard']))
+      .then(() => {
+        this.router.navigate(['/dashboard']);
+      })
       .catch((e) => console.log(e.message));
   }
 }

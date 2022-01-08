@@ -2,6 +2,7 @@ import { Auth, signInWithEmailAndPassword, signOut } from '@angular/fire/auth';
 
 import { Injectable } from '@angular/core';
 import { LoginData } from '../interfaces/login-data.interface';
+import { onAuthStateChanged } from 'firebase/auth';
 
 @Injectable({
   providedIn: 'root',
@@ -15,5 +16,10 @@ export class AuthService {
 
   logout() {
     return signOut(this.auth);
+  }
+
+  whoIs() {
+    const user = this.auth.currentUser;
+    return user
   }
 }

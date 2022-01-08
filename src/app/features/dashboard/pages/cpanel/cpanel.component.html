@@ -1,1 +1,2 @@
-<app-admin-page></app-admin-page>
+<app-admin-page *ngIf="admin"></app-admin-page>
+<app-student-page *ngIf="!admin"></app-student-page>
