@@ -4,7 +4,8 @@ export interface History {
   course: string,
   day: string,
   month: string,
-  year: string
+  year: string,
+  description:string,
 }
 
 @Component({

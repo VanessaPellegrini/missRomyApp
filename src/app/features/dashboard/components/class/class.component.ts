@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ClassService } from '../../services/class.service';
+import { DBService } from '../../services/db.service';
 import { Router } from '@angular/router';
 
 export interface Program {
@@ -16,7 +16,7 @@ export interface Program {
 })
 export class ClassComponent implements OnInit {
   @Input() data: any[]=[]
-  constructor(private _cService: ClassService, private _router:Router) {
+  constructor(private _cService: DBService, private _router:Router) {
   }
 
   ngOnInit(): void {
@@ -27,7 +27,7 @@ export class ClassComponent implements OnInit {
   }
 
   deleteClass(key:any){
-    this._cService.deleteClass(key);
+    this._cService.delete("clase",key);
   }
 
 }

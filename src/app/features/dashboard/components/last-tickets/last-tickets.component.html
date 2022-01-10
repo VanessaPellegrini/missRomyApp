@@ -11,8 +11,17 @@
                 <p>{{ item.report }}</p>
             </div>
         </div>
-        <div class="btn">
-            <button mat-flat-button color="primary">Responder</button>
+        <div>
+            <form class="example-form" >
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Respuesta</mat-label>
+                    <textarea matInput placeholder="Escribe una respuesta aquí"></textarea>
+                </mat-form-field>
+                <div>
+                    <button class="btn" type="submit" (click)=send() mat-flat-button color="primary">Responder</button>
+                </div>
+            </form>
+
         </div>
     </div>
 </div>

@@ -20,4 +20,8 @@ export class LastTicketsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  send(){
+    
+  }
+
 }

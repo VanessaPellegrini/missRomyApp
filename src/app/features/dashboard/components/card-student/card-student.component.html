@@ -20,4 +20,11 @@
             </mat-chip-list>
         </p>
     </mat-expansion-panel>
+    <br>
+    <div class="btnBox">
+        <button class="btn" mat-flat-button color="primary" (click)="updateClass(card.rut)">Modificar</button>
+        <button class="btn" mat-flat-button color="error" (click)="deleteClass(card.rut)">
+            Eliminar
+        </button>
+    </div>
 </div>

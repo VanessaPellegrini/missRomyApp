@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { ClassService } from '../../services/class.service';
+import { DBService } from '../../services/db.service';
 import { NewClass } from '../crear-clase/crear-clase.component';
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -26,7 +26,7 @@ export class UpdateClassComponent implements OnInit {
   url: string = 'url.com';
 
   constructor(
-    private classService: ClassService, 
+    private classService: DBService, 
     private route: ActivatedRoute,
     private _router: Router
   ) { 
@@ -57,7 +57,7 @@ export class UpdateClassComponent implements OnInit {
       hour: this.hour.value,
       day: this.day.value
     }
-    this.classService.updateClass(data.asignature,data);
+    this.classService.update("clase",data.asignature,data);
     this._router.navigate(["dashboard"])
   }
 

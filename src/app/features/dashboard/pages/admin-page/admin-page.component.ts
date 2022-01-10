@@ -3,7 +3,7 @@ import { Program } from '../../components/class/class.component';
 import { Report } from '../../components/last-tickets/last-tickets.component';
 import { Options } from '../../components/options/options.component';
 import { History } from '../../components/class-history/class-history.component';
-import { ClassService } from '../../services/class.service';
+import { DBService } from '../../services/db.service';
 
 @Component({
   selector: 'app-admin-page',
@@ -21,10 +21,24 @@ export class AdminPageComponent implements OnInit {
 
   history: History[] = [
     {
-      course: 'curso',
-      day: 'dia',
-      month: 'mes',
-      year: 'anio' 
+      course: 'PROGRAMACION',
+      day: '11',
+      month: 'diciembre',
+      year: '2021',
+      description:'Clase modalidad online'
+    },
+    {
+      course: 'LENGUAJE',
+      day: '10',
+      month: 'diciembre',
+      year: '2021' ,
+      description:'Clase modalidad online'
+    },    {
+      course: 'FISICA',
+      day: '9',
+      month: 'diciembre',
+      year: '2021' ,
+      description:'Clase modalidad online'
     }
   ]
   report: Report[] = [
@@ -36,8 +50,8 @@ export class AdminPageComponent implements OnInit {
   ]
 
 
-  constructor(private _cService: ClassService) { 
-    this._cService.item$.subscribe( (data) => {
+  constructor(private _cService: DBService) { 
+    this._cService.get("clase").subscribe( (data) => {
       this.data=data
     })
   }

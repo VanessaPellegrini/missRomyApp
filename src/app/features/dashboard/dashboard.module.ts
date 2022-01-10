@@ -45,6 +45,6 @@ import { UpdateClassComponent } from './components/update-class/update-class.com
     FormsModule,
     ReactiveFormsModule,
     SharedModule,
-  ]
+  ],
 })
 export class DashboardModule { }
