@@ -55,7 +55,8 @@ import {MatChipsModule} from "@angular/material/chips";
     MatTooltipModule,
     MatBadgeModule,
     MatStepperModule,
-    MatChipsModule
+    MatChipsModule,
+    MatExpansionModule
   ]
 })
 export class MaterialModule { }

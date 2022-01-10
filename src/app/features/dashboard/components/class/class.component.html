@@ -1,6 +1,6 @@
 <div *ngFor="let item of data" class="classSection">
     <div class="box">
-        <p class="boxTitle">ramo: {{ item.course }}</p>
+        <p class="boxTitle">ramo: {{ item.asignature }}</p>
         <div class="items">
             <div class="info">
                 <mat-icon>watch_later</mat-icon>
@@ -8,7 +8,7 @@
             </div>
             <div class="info">
                 <mat-icon>calendar_month</mat-icon>
-                <p>Dia: {{ item.date }}</p>
+                <p>Dia: {{ item.day }}</p>
             </div>
             <div class="info">
                 <mat-icon>place</mat-icon>
@@ -17,6 +17,9 @@
         </div>
         <div class="btnBox">
             <button class="btn" mat-flat-button color="primary">Modificar</button>
+            <button class="btn" mat-flat-button color="error" (click)="deleteClass(item.doc)">
+                Eliminar
+            </button>
         </div>
     </div>
 </div>

@@ -1,10 +1,12 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ClassService } from '../../services/class.service';
 
 export interface Program {
-  course: string,
+  asignature: string,
   hour: string,
-  date: string,
-  mode: string
+  day: string,
+  mode: string,
+  doc:string
 }
 
 @Component({
@@ -13,10 +15,20 @@ export interface Program {
   styleUrls: ['./class.component.css']
 })
 export class ClassComponent implements OnInit {
-  @Input() data: Program[]=[]
-  constructor() { }
+  @Input() data: any[]=[]
+  constructor(private _cService: ClassService) {
+    console.log(this.data, "componente");
+    this.data.forEach(element => {
+      console.log(element);
+      
+    });
+   }
 
   ngOnInit(): void {
+  }
+
+  deleteClass(doc:any){
+    this._cService.deleteClass(doc);
   }
 
 }

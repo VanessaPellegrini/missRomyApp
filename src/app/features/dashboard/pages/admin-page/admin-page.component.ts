@@ -3,6 +3,7 @@ import { Program } from '../../components/class/class.component';
 import { Report } from '../../components/last-tickets/last-tickets.component';
 import { Options } from '../../components/options/options.component';
 import { History } from '../../components/class-history/class-history.component';
+import { ClassService } from '../../services/class.service';
 
 @Component({
   selector: 'app-admin-page',
@@ -11,26 +12,20 @@ import { History } from '../../components/class-history/class-history.component'
 })
 export class AdminPageComponent implements OnInit {
 
-  menu: Options[] = [
+  menuClases: Options[] = [
     { option: 'Crear Clase', link: 'crear-clase'},
-    { option: 'Crear Ususario', link: 'crear-usuario' },
     { option: 'Asignar Educador/Clase', link: 'asignar' },
     { option: 'Cargar Contenido', link: 'cargar-contenido'}
   ];
-  data: Program[] = [
-    { 
-      course: 'curso',
-      hour: 'hh:mm hrs',
-      date: 'dia dd de mes',
-      mode: 'www.url.com/class'
-    },
-    {
-      course: 'curso',
-      hour: 'hh:mm hrs',
-      date: 'dia dd de mes',
-      mode: 'www.url.com/class'
-    }
+
+  menuEstudiantes: Options[] = [
+    { option: 'Crear Usuario', link: 'crear-usuario' },
+    { option: 'Asignar Educador/Clase', link: 'asignar' },
+    { option: 'Cargar Contenido', link: 'cargar-contenido'}
   ];
+
+  data: any[] = [];
+
   history: History[] = [
     {
       course: 'curso',
@@ -48,7 +43,12 @@ export class AdminPageComponent implements OnInit {
   ]
 
 
-  constructor() { }
+  constructor(private _cService: ClassService) { 
+    this._cService.item$.subscribe( (data) => {
+      console.log(data);
+      this.data=data
+    }) 
+  }
 
   ngOnInit(): void {
   }

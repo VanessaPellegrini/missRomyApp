@@ -8,7 +8,7 @@ import { AuthService } from '../../../../core/services/auth.service';
 })
 export class CpanelComponent implements OnInit {
 
-  uid: string = 'kyB2sKZKZ5eh76FgVXnGZQ31RF62';
+  uid: string = 'lXl9pOgOgSQxLvQNjvfdy2Xy0O22';
   admin: boolean;
 
   constructor(

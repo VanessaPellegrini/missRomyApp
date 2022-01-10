@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { SendDataService } from '../../services/send-data.service';
+import { ClassService } from '../../services/class.service';
 
 export interface NewClass {
   asignature: string,
@@ -30,7 +30,7 @@ export class CrearClaseComponent implements OnInit {
   url: string = 'url.com';
 
   constructor(
-    private sendData: SendDataService,
+    private classService: ClassService
   ) { 
     this.addClassForm = new FormGroup({
       asignature: this.asignature = new FormControl('', [Validators.required]),
@@ -56,10 +56,8 @@ export class CrearClaseComponent implements OnInit {
       hour: this.hour.value,
       day: this.day.value
     }
-    return this.sendData.send( data, this.url )
-      // .subscribe((res: any) => {
-      //   console.log(res);
-      // });
+    this.classService.createClass(data);
+    this.addClassForm.reset();
   }
 
 }

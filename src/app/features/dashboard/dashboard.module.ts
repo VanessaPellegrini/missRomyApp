@@ -20,7 +20,6 @@ import { CpanelComponent } from './pages/cpanel/cpanel.component';
 import { CardStudentComponent } from './components/card-student/card-student.component';
 import { ViewStudenListComponent } from './pages/view-studen-list/view-studen-list.component';
 
-
 @NgModule({
   declarations: [
     DashboardComponent,
@@ -43,7 +42,7 @@ import { ViewStudenListComponent } from './pages/view-studen-list/view-studen-li
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
-    SharedModule
+    SharedModule,
   ]
 })
 export class DashboardModule { }

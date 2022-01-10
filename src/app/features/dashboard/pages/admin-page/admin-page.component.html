@@ -1,4 +1,22 @@
-<app-options [items]='menu'></app-options>
+<mat-accordion>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Configuración de estudiantes
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <app-options [items]='menuEstudiantes'></app-options>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Configuración de clases
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <app-options [items]='menuClases'></app-options>
+    </mat-expansion-panel>
+  </mat-accordion>
+
 <div class="boxSection">
     <h3>Clases Disponibles</h3>
     <app-class [data]='data' ></app-class>

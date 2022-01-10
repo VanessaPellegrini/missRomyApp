@@ -1,8 +1,6 @@
 import { Auth, signInWithEmailAndPassword, signOut } from '@angular/fire/auth';
-
 import { Injectable } from '@angular/core';
 import { LoginData } from '../interfaces/login-data.interface';
-import { onAuthStateChanged } from 'firebase/auth';
 
 @Injectable({
   providedIn: 'root',
