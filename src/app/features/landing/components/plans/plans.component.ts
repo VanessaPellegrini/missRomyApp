@@ -16,13 +16,18 @@ export class PlansComponent implements OnInit {
   plans: Plan[] = [
     {
       title: 'Plan S', 
-      body: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint impedit saepe excepturi voluptatum.',
+      body: 'Plan de 6 clases, puedes cursar los ramos que desees reforzar. Cada clase es de 1.5hs.',
       price: '$120.000'
     },
     {
-      title: 'Plan S', 
-      body: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint impedit saepe excepturi voluptatum.',
-      price: '$120.000'
+      title: 'Plan M', 
+      body: 'Plan de 12 clases, puedes cursar los ramos que desees reforzar. Cada clase es de 1.5hs.',
+      price: '$240.000'
+    },
+    {
+      title: 'Plan L', 
+      body: 'Plan de 24 clases, puedes cursar los ramos que desees reforzar. Cada clase es de 1.5hs.',
+      price: '$480.000'
     },
   ]
 

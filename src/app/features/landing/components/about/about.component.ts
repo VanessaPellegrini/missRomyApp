@@ -2,7 +2,10 @@ import { Component, OnInit } from '@angular/core';
 
 interface Text {
   title: string,
-  body: string
+  step1: string,
+  step2:string,
+  step3:string,
+  step4:string
 }
 
 @Component({
@@ -14,7 +17,14 @@ export class AboutComponent implements OnInit {
 
 
   texts: Text[] = [
-    {title:'Large Body', body: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus libero harum dignissimos culpa sed quia labore, consequuntur iste earum eveniet, dolores at laudantium a, maxime hic suscipit atque optio commodi.'}
+    {
+      title:'Paso a Paso', 
+    step1: '1 - Nos cuentas qué necesitas reforzar.',
+    step2:'2 - Generamos un vínculo contigo en donde prima la transparencia y la confianza, y comenzamos la planificación.', 
+    step3:'3 - Coordinamos como realizaremos la atención, puedes elegir presencial u online.',
+    step4:'4 - Accedes al panel de control para gestionar todo tu método de aprendizaje.'
+  },
+    
   ]
 
   constructor() { }

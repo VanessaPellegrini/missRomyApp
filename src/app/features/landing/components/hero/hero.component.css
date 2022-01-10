@@ -1,12 +1,21 @@
 .hero {
-    padding: 2.5rem;
+    padding: 0.25rem 2.5rem;
     height: 50%;
 }
 .hero-title {
     position: relative;
     top: 50%;
+    padding: 3px 6px;
+    width: 100%;
 }
 .btn {
     padding: 0.25rem 2.5rem;
     text-transform: uppercase;
+}
+div.hero{
+    background-image: url(../../../../../assets/carl-jorgensen-leyUrzdwurc-unsplash.png);
+    background-repeat: no-repeat;
+}
+h2{
+    background-color: rgba(255, 255, 255, 0.51);
 }

@@ -17,15 +17,15 @@ export class TestimonialsComponent implements OnInit {
   testimonials: Testimonials[] = [
     {
       icon: 'account_circle',
-      name: 'Name Surname',
+      name: 'Felipe Midas',
       time: '1h ago',
-      body: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint impedit saepe excepturi voluptatum.'
+      body: 'Me gusta utilizar la aplicación es simple y fácil de usar.'
     },
     {
       icon: 'account_circle',
-      name: 'Name Surname',
+      name: 'Tania Quijada',
       time: '1h ago',
-      body: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint impedit saepe excepturi voluptatum.'
+      body: 'Me encantó desde el primer día, ya que encontré apoyo en todos los ámbitos de mi aprendizaje.'
     },
   ]
 
