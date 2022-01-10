@@ -3,6 +3,10 @@
 </div>
 <div class=formSection>
     <form class="form" [formGroup]="addUserForm">
+        <mat-button-toggle-group [formControl]="tipoUsuario" name="fontStyle" aria-label="Font Style" required>
+            <mat-button-toggle value="estudiante"> Estudiante </mat-button-toggle>
+            <mat-button-toggle value="educador">Educador</mat-button-toggle>
+          </mat-button-toggle-group>
         <mat-form-field appearance="outline" class="inputForm">
             <mat-label>Nombre</mat-label>
             <input matInput placeholder="Nombre" [formControl]="name">

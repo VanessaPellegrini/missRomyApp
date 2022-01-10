@@ -12,16 +12,9 @@ import { ClassService } from '../../services/class.service';
 })
 export class AdminPageComponent implements OnInit {
 
-  menuClases: Options[] = [
+  menu: Options[] = [
     { option: 'Crear Clase', link: 'crear-clase'},
-    { option: 'Asignar Educador/Clase', link: 'asignar' },
-    { option: 'Cargar Contenido', link: 'cargar-contenido'}
-  ];
-
-  menuEstudiantes: Options[] = [
     { option: 'Crear Usuario', link: 'crear-usuario' },
-    { option: 'Asignar Educador/Clase', link: 'asignar' },
-    { option: 'Cargar Contenido', link: 'cargar-contenido'}
   ];
 
   data: any[] = [];
@@ -45,9 +38,8 @@ export class AdminPageComponent implements OnInit {
 
   constructor(private _cService: ClassService) { 
     this._cService.item$.subscribe( (data) => {
-      console.log(data);
       this.data=data
-    }) 
+    })
   }
 
   ngOnInit(): void {

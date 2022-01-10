@@ -11,7 +11,9 @@ import {
   setDoc,
   addDoc
 } from '@angular/fire/firestore';
+import { getDocs } from 'firebase/firestore';
 import { Observable } from 'rxjs';
+
 
 export interface Class {
   id?: string;
@@ -28,7 +30,7 @@ export interface Class {
 
 export class ClassService {
   item$: Observable<any[]>;
-  collection: any;
+  classCollection: any;
 
   private dbPath = "/clase";
 
@@ -36,16 +38,17 @@ export class ClassService {
     private afs: Firestore,
     //private documentReference:DocumentReference
   ) {
-    this.collection = collection(this.afs, this.dbPath);
-    this.item$ = collectionData(this.collection)
+    this.classCollection = collection(this.afs, this.dbPath);
+    this.item$ = collectionData(this.classCollection);
   }
 
-  createClass(classRoom: any) {
-    return addDoc(collection(this.afs, this.dbPath), classRoom);
+  createClass(classRoom: any, docName:string) {
+    return setDoc(doc(this.afs, this.dbPath, docName), classRoom);
   }
 
-  updateClass(key: string, value: any): Promise<void> {
-    return updateDoc(this.collection, key, value);
+  updateClass(docName:string, value: any){
+    const classRef = doc(this.afs, this.dbPath, docName)
+    return updateDoc( classRef, value);
   }
 
   deleteClass(key: any) {

@@ -1,23 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ClassService } from '../../services/class.service';
+import { NewClass } from '../crear-clase/crear-clase.component';
+import { ActivatedRoute, Router } from '@angular/router';
 
-export interface NewClass {
-  asignature: string,
-  teacher: string,
-  link: string,
-  number: number,
-  group: string,
-  hour: string,
-  day: string
-}
 
 @Component({
-  selector: 'app-crear-clase',
-  templateUrl: './crear-clase.component.html',
-  styleUrls: ['./crear-clase.component.css']
+  selector: 'app-update-class',
+  templateUrl: './update-class.component.html',
+  styleUrls: ['./update-class.component.css']
 })
-export class CrearClaseComponent implements OnInit {
+export class UpdateClassComponent implements OnInit {
+
+
+  myParam: any;
 
   addClassForm: FormGroup;
   asignature: FormControl;
@@ -30,7 +26,9 @@ export class CrearClaseComponent implements OnInit {
   url: string = 'url.com';
 
   constructor(
-    private classService: ClassService
+    private classService: ClassService, 
+    private route: ActivatedRoute,
+    private _router: Router
   ) { 
     this.addClassForm = new FormGroup({
       asignature: this.asignature = new FormControl('', [Validators.required]),
@@ -44,6 +42,9 @@ export class CrearClaseComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.route.params.subscribe((params: any) => this.myParam = params['key']);
+    console.log(this.myParam);
+    
   }
 
   send(){
@@ -56,8 +57,9 @@ export class CrearClaseComponent implements OnInit {
       hour: this.hour.value,
       day: this.day.value
     }
-    this.classService.createClass(data, data.asignature);
-    this.addClassForm.reset();
+    this.classService.updateClass(data.asignature,data);
+    this._router.navigate(["dashboard"])
   }
 
 }
+

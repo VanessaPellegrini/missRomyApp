@@ -25,6 +25,7 @@ import {MatBadgeModule} from '@angular/material/badge';
 import {MatStepperModule} from '@angular/material/stepper';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatChipsModule} from "@angular/material/chips";
+import {MatButtonToggleModule} from '@angular/material/button-toggle'
 
 @NgModule({
   imports: [
@@ -56,7 +57,8 @@ import {MatChipsModule} from "@angular/material/chips";
     MatBadgeModule,
     MatStepperModule,
     MatChipsModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatButtonToggleModule
   ]
 })
 export class MaterialModule { }

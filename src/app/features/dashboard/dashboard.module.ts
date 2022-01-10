@@ -19,6 +19,7 @@ import { SharedModule } from '../../shared/shared.module';
 import { CpanelComponent } from './pages/cpanel/cpanel.component';
 import { CardStudentComponent } from './components/card-student/card-student.component';
 import { ViewStudenListComponent } from './pages/view-studen-list/view-studen-list.component';
+import { UpdateClassComponent } from './components/update-class/update-class.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { ViewStudenListComponent } from './pages/view-studen-list/view-studen-li
     CpanelComponent,
     CardStudentComponent,
     ViewStudenListComponent,
+    UpdateClassComponent
   ],
   imports: [
     CommonModule,

@@ -1,4 +1,4 @@
-import { HostListener, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard.component';
 
@@ -21,6 +21,10 @@ const routes: Routes = [
       loadChildren: () => 
         import('./pages/view-studen-list/view-studen-list.module').then((m) => m.ViewStudenListModule)
       },
+      { path: 'modificar-clase/:key', 
+        loadChildren: () => 
+          import('./components/update-class/update-class.module').then((m) => m.UpdateClassModule)
+      }
     ]
   },
 ];

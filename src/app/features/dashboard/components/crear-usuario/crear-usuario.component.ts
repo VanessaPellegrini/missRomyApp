@@ -15,7 +15,7 @@ export interface NewUser {
   city: string,
   level: number,
   group: string,
-
+  tipoUsuario:string
 }
 @Component({
   selector: 'app-crear-usuario',
@@ -38,6 +38,7 @@ export class CrearUsuarioComponent implements OnInit {
   level: FormControl;
   group: FormControl;
   url: string = 'url.com';
+  tipoUsuario:FormControl;
 
 
   constructor(
@@ -56,7 +57,7 @@ export class CrearUsuarioComponent implements OnInit {
       city: this.city = new FormControl('', [Validators.required]),
       level: this.level = new FormControl('', [Validators.required]),
       group: this.group = new FormControl('', [Validators.required]),
-
+      tipoUsuario: this.tipoUsuario = new FormControl('', [Validators.required])
     })
   }
   ngOnInit(): void {
@@ -76,6 +77,7 @@ export class CrearUsuarioComponent implements OnInit {
       city: this.city.value,
       level: this.level.value,
       group: this.group.value,
+      tipoUsuario: this.tipoUsuario.value
     }
     return this.sendData.send( data, this.url )
       // .subscribe((res: any) => {
