@@ -4,14 +4,10 @@ import {
   collectionData,
   collection,
   doc,
-  onSnapshot,
-  docSnapshots,
   updateDoc,
   deleteDoc,
   setDoc,
-  addDoc
 } from '@angular/fire/firestore';
-import { getDocs } from 'firebase/firestore';
 import { Observable } from 'rxjs';
 
 

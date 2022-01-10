@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { SendDataService } from '../../services/send-data.service';
+
 
 export interface NewUser {
   name: string,
@@ -42,7 +42,6 @@ export class CrearUsuarioComponent implements OnInit {
 
 
   constructor(
-    private sendData: SendDataService
   ) { 
     this.addUserForm = new FormGroup({
       name: this.name = new FormControl('', [Validators.required]),
@@ -79,9 +78,7 @@ export class CrearUsuarioComponent implements OnInit {
       group: this.group.value,
       tipoUsuario: this.tipoUsuario.value
     }
-    return this.sendData.send( data, this.url )
-      // .subscribe((res: any) => {
-      //   console.log(res);
-      // });
+    //this._studentService.createStudent(data, data.rut);
+    this.addUserForm.reset();
   }
 }
