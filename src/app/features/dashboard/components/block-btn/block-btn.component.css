@@ -6,11 +6,11 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    background: var(--bg-primary);
+    background: var(--c-secondary);
     border-radius: 6px;
 }
 .box p {
-    color: var(--color-accent);
+    color: var(--c-grey);
     font-weight: 600;
     margin: 0;
 }

@@ -1,6 +1,6 @@
 .box {
     padding: 0.6rem;
-    background: var(--bg-forms);
+    background: var(--c-forms);
     display: flex;
     justify-content: center;
     color: white;

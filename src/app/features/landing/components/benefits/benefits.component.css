@@ -1,11 +1,11 @@
 .benefits {
     padding: 1.25rem 0;
-    color: var(--color-accent)
+    color: var(--c-grey)
 }
 .box {
     margin-top: 2rem;
     padding: 1.25rem 2.5rem;
-    background: var(--bg-secondary);
+    background: var(--c-light);
 }
 .iconDiv {
     display: flex;
@@ -22,7 +22,7 @@
 .joinUs {
     margin-top: 2rem;
     padding: 1.25rem 2.5rem;
-    background: var(--bg-primary);
+    background: var(--c-secondary);
 }
 .subtitle {
     font-size: 20px;

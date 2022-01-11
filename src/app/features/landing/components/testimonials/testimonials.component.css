@@ -5,14 +5,14 @@
 .box {
     margin-top: 2rem;
     padding: 2rem 1.5rem;
-    background: var(--bg-secondary);
+    background: var(--c-light);
     display: flex;
 }
 .textBox {
     display: flex;
 }
 .userBox {
-    color: var(--color-primary);
+    color: var(--c-primary);
     font-weight: 500;
     font-size: 15px;
     padding-right: 1rem;

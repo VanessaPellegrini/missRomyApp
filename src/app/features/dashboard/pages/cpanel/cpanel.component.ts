@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { AuthService } from '../../../../core/services/auth.service';
 
 @Component({
@@ -8,8 +8,9 @@ import { AuthService } from '../../../../core/services/auth.service';
 })
 export class CpanelComponent implements OnInit {
 
-  uid: string = 'lXl9pOgOgSQxLvQNjvfdy2Xy0O22';
   admin: boolean;
+
+  @Output() menu = new EventEmitter();
 
   constructor(
     private readonly authService: AuthService,
@@ -21,12 +22,11 @@ export class CpanelComponent implements OnInit {
   }
 
   verification () {
-    const user = this.authService.whoIs();
-    if ( user && user.uid === this.uid ) {
+    if ( this.authService.verification() ) {
       this.admin = true;
     }
     else {
-      this.admin = false
+      this.admin = false;
     }
   }
 }

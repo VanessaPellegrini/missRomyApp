@@ -1,1 +1,28 @@
-<p>class-selector-card works!</p>
+ <div class="card" *ngFor="let item of data">
+     <div class="class">
+        <p>Ramo: {{ item.asignature | uppercase }} </p>
+     </div>
+     <div class="body">
+        <div class="data">
+            <div class="info">
+                <mat-icon>place</mat-icon>
+                <p>Modalidad: {{ item.link }} </p>
+            </div>
+            <div class="info">
+                <mat-icon>watch_later</mat-icon>
+                <p>Horario:  {{ item.hour }}</p>
+            </div>
+            <div class="info">
+                <mat-icon>calendar_month</mat-icon>
+                <p>Dia: {{ item.day }}</p>
+            </div>
+            <div class="info">
+                <mat-icon>person</mat-icon>
+                <p>Profesor: {{ item.teacher }}</p>
+            </div>
+        </div>
+        <div class="button">
+            <button class="btn" mat-flat-button color="primary">Inscribir</button>
+        </div>
+     </div>
+ </div>

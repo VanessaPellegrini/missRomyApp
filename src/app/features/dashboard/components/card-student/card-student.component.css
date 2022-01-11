@@ -1,10 +1,10 @@
 .card{
-    background: var(--bg-secondary);
+    background: var(--c-light);
     padding: 1rem;
     margin-top: 1rem;
 }
 .card p, mat-panel-title{
-    color: var(--color-primary);
+    color: var(--c-primary);
     font-weight: 500;
 }
 .card mat-icon {
@@ -17,7 +17,7 @@
 }
 .box p {
     margin: 0;
-    color: var(--color-primary);
+    color: var(--c-primary);
     padding: 0 0 0.3rem 0.5rem;
     font-weight: 600;
 }

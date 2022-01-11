@@ -2,7 +2,7 @@
     padding: 1rem;
 }
 .form p {
-    color: var(--color-primary);
+    color: var(--c-primary);
 }
 .form .btn {
     padding: .2rem 3rem; 

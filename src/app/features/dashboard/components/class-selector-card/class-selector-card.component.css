@@ -1,0 +1,34 @@
+.card {
+    margin: 1rem;
+}
+.card .class {
+    padding: 1rem 2rem;
+    background: var(--c-secondary);
+}
+.card .class p {
+    margin: 0;
+    color: var(--c-primary);
+    font-weight: 600;
+}
+.card .body {
+    background: var(--c-lightgrey);
+    padding: 1rem .8rem;
+}
+.card .body .data .info{
+    display: flex;
+    justify-content: flex-start;
+    margin: 0.3rem;
+    padding-bottom: 1rem;
+}
+.card .body .data .info p, mat-icon{
+    margin: 0;
+    padding: 0.2rem 0 0 1rem;
+    color: var(--c-primary);
+}
+.button {
+    display: flex;
+    justify-content: flex-end;
+}
+.button .btn {
+    padding: .5rem 3rem;
+}

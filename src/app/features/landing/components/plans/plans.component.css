@@ -1,5 +1,5 @@
 .box {
-    background: var(--color-primary);
+    background: var(--c-primary);
     padding: 2rem 2.5rem;
     margin-top: 1.5rem;
 }
@@ -22,6 +22,6 @@
 .btn {
     padding: 0.25rem 2.5rem;
     text-transform: uppercase;
-    border-color: var(--color-primary);
+    border-color: var(--c-primary);
     border-width: 0.15rem;
 }

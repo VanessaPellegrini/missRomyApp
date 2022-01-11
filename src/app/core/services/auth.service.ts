@@ -6,7 +6,12 @@ import { LoginData } from '../interfaces/login-data.interface';
   providedIn: 'root',
 })
 export class AuthService {
-  constructor(private auth: Auth) {}
+  
+  private readonly uid: string = 'lXl9pOgOgSQxLvQNjvfdy2Xy0O22'
+  
+  constructor(
+    private auth: Auth,
+    ) {}
 
   login({ email, password }: LoginData) {
     return signInWithEmailAndPassword(this.auth, email, password);
@@ -19,5 +24,14 @@ export class AuthService {
   whoIs() {
     const user = this.auth.currentUser;
     return user
+  }
+
+  verification() {
+    const user = this.whoIs();
+    if ( user && user.uid === this.uid ) {
+      return true;
+    } else {
+      return false;
+    }
   }
 }

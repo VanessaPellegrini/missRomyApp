@@ -3,18 +3,18 @@
 }
 .box {
     padding: 1rem;
-    background: var(--bg-primary);
+    background: var(--c-secondary);
 }
 .box .boxTitle {
-    color: var(--color-accent);
+    color: var(--c-grey);
     font-weight: 600;
     text-transform: uppercase;
     margin: 0;
 }
 .box p {
-    color: var(--color-accent);
+    color: var(--c-grey);
     font-weight: 600;
 }
 mat-panel-title {
-    color: var(--color-primary);
+    color: var(--c-primary);
 }

@@ -3,7 +3,7 @@
 }
 .section h3 {
     margin: 0;
-    color: var(--color-primary);
+    color: var(--c-primary);
     font-weight: 700;
     font-size: 1.3rem;
 }
@@ -14,13 +14,13 @@
 .box {
     margin-top: 1rem;
     padding: 1.5rem;
-    background: var(--bg-secondary);
+    background: var(--c-light);
 }
 .innerBox {
     display: flex;
 }
 .innerBox p, small {
-    color: var(--color-accent);
+    color: var(--c-grey);
 }
 .textBox {
     display: flex;
@@ -28,7 +28,7 @@
     padding-bottom: 1rem;
 }
 .userBox {
-    color: var(--color-primary);
+    color: var(--c-primary);
     font-weight: 600;
     font-size: 15px;
     padding-right: 1rem;

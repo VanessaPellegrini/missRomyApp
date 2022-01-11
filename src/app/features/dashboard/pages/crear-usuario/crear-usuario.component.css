@@ -1,6 +1,6 @@
 .box {
     padding: 0.6rem;
-    background: var(--bg-forms);
+    background: var(--c-forms);
     display: flex;
     justify-content: center;
     color: white;
@@ -13,7 +13,7 @@
     padding: 1rem;
 }
 .form p {
-    color: var(--color-primary);
+    color: var(--c-primary);
 }
 .form .btn {
     padding: .2rem 3rem; 

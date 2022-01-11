@@ -3,7 +3,7 @@
 
 }
 .box .darkblue {
-    background: var(--bg-darkblue);
+    background: var(--c-darkblue);
     padding: 1rem;
     border-radius: 8px 8px 0 0;
     color: white
@@ -15,7 +15,7 @@
     line-height: 2rem;
 }
 .box .blue {
-    background: var(--color-primary);
+    background: var(--c-primary);
     padding: 1rem;
     border-radius:  0 0 8px 8px;
     color: white;
@@ -28,7 +28,7 @@
     margin: 0;
 }
 .box .btn {
-    color: var(--bg-darkblue);
+    color: var(--c-darkblue);
     font-weight: 500;
     padding: .5rem;
 }

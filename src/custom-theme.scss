@@ -34,16 +34,17 @@ $missRomy-theme: mat.define-light-theme((
 @include mat.all-component-themes($missRomy-theme);
 
 :root {
-  --color-primary: hsl(207, 90%, 54%);
-  --color-accent: hsl(0, 0%, 62%);
-  --bg-primary: hsl(207, 89%, 86%);
-  --bg-forms: hsl(207, 83%, 69%);
-  --bg-secondary: hsl(205, 87%, 94%);
-  --bg-darkblue: hsl(207, 100%, 25%);
+  --c-primary: hsl(207, 90%, 54%);
+  --c-secondary: hsl(207, 89%, 86%);
+  --c-light: hsl(205, 87%, 94%);
+  --c-darkblue: hsl(207, 100%, 25%);
+  --c-forms: hsl(207, 83%, 69%);
+  --c-grey: hsl(0, 0%, 62%);
+  --c-lightgrey: hsl(0, 0%, 93%);
 }
 .pageSection{
   padding: 1.25rem 2.5rem;
-  color: var(--color-accent)
+  color: var(--c-grey)
 }
 .title {
   display: flex;
@@ -60,5 +61,5 @@ $missRomy-theme: mat.define-light-theme((
   line-height: 2rem;
 }
 .subtext {
-  color: var(--color-primary);
+  color: var(--c-primary);
 }
