@@ -1,4 +1,4 @@
- <div class="card" *ngFor="let item of data">
+ <div class="card" *ngFor="let item of class">
      <div class="class">
         <p>Ramo: {{ item.asignature | uppercase }} </p>
      </div>
@@ -22,7 +22,7 @@
             </div>
         </div>
         <div class="button">
-            <button class="btn" mat-flat-button color="primary">Inscribir</button>
+            <button class="btn" mat-flat-button (click)='enrolled(item.asignature)' color="primary">Inscribir</button>
         </div>
      </div>
  </div>

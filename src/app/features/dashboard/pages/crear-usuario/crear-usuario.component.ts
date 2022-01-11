@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { DBService } from '../../../../core/services/db.service';
+import { AuthService } from '../../../../core/services/auth.service';
 
 export interface NewUser {
   name: string,
@@ -28,6 +29,7 @@ export class CrearUsuarioComponent implements OnInit {
   name: FormControl;
   lastName: FormControl;
   email: FormControl;
+  pass: FormControl;
   rut: FormControl;
   street: FormControl;
   number: FormControl;
@@ -37,15 +39,21 @@ export class CrearUsuarioComponent implements OnInit {
   city: FormControl;
   level: FormControl;
   group: FormControl;
-  url: string = 'url.com';
   tipoUsuario:FormControl;
+
+  url: string = 'url.com';
   title: string = 'Crear Usuario'
 
-  constructor(private _db:DBService) {
+  constructor(
+    private _db:DBService,
+    private auth: AuthService,
+    
+    ) {
     this.addUserForm = new FormGroup({
       name: this.name = new FormControl('', [Validators.required]),
       lastName: this.lastName = new FormControl('', [Validators.required]),
       email: this.email = new FormControl('', [Validators.required]),
+      pass: this.pass = new FormControl('', [Validators.required]),
       rut: this.rut = new FormControl('', [Validators.required]),
       street: this.street = new FormControl('', [Validators.required]),
       number: this.number = new FormControl('', [Validators.required]),
@@ -78,6 +86,7 @@ export class CrearUsuarioComponent implements OnInit {
       tipoUsuario: this.tipoUsuario.value
     }
     this._db.create("estudiante", data.rut, data);
+    this.auth.signup( data.email, this.pass.value )
     this.addUserForm.reset();
   }
 }

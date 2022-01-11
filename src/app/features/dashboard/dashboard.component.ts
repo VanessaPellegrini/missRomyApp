@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../core/services/auth.service';
+import { DBService } from '../../core/services/db.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -9,19 +10,31 @@ import { AuthService } from '../../core/services/auth.service';
 export class DashboardComponent implements OnInit {
   
   menu: any[] = [];
+  class: any[] = [];
+  students: any[] = [];
+  userOn: string;
+  title: string;
 
-  title: string = 'Bienvenido usuario';
-
-  constructor(    
-      private readonly authService: AuthService,
+  constructor(   
+      private db: DBService,
+      private readonly auth: AuthService,
     ) { 
-      this.verification()
+      this.verification();
+      this.db.get('clase').subscribe( data => {
+        this.class = data;
+      });
     }
 
   ngOnInit(): void {}
 
+  setTitle() {
+    return this.title = `Bienvenido ${ this.userOn }`
+  }
+
   verification () {
-    if ( this.authService.verification() ) {
+    if ( this.auth.verification() ) {
+      this.userOn = 'Admin';
+      this.setTitle();
       this.menu = [
         { option: 'dashboard', link: '/dashboard' },
         { option: 'crear clase', link: 'crear-clase' },
@@ -29,6 +42,15 @@ export class DashboardComponent implements OnInit {
       ];
     }
     else {
+      this.db.get('estudiante').subscribe( data => {
+        this.students = data;
+        const user = this.auth.whoIs()
+        if (user) {
+          const [ student ] = this.students.filter( element => element.email.toLowerCase() === user.email);
+          this.userOn = student.name;
+          this.setTitle();
+        }
+      });
       this.menu = [
         { option: 'dashboard', link: '/dashboard' },
         { option: 'seleccionar clase', link: 'seleccionar-clase' },

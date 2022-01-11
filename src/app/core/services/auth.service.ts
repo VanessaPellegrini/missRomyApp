@@ -1,4 +1,4 @@
-import { Auth, signInWithEmailAndPassword, signOut } from '@angular/fire/auth';
+import { Auth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut,  } from '@angular/fire/auth';
 import { Injectable } from '@angular/core';
 import { LoginData } from '../interfaces/login-data.interface';
 
@@ -17,6 +17,10 @@ export class AuthService {
     return signInWithEmailAndPassword(this.auth, email, password);
   }
 
+  signup(email: string, password: string){
+    return createUserWithEmailAndPassword(this.auth, email, password)
+  }
+
   logout() {
     return signOut(this.auth);
   }
@@ -27,7 +31,7 @@ export class AuthService {
   }
 
   verification() {
-    const user = this.whoIs();
+    const user = this.auth.currentUser;
     if ( user && user.uid === this.uid ) {
       return true;
     } else {
