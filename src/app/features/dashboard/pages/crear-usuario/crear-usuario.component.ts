@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { DBService } from '../../services/db.service';
+import { DBService } from '../../../../core/services/db.service';
 
 export interface NewUser {
   name: string,
@@ -39,6 +39,7 @@ export class CrearUsuarioComponent implements OnInit {
   group: FormControl;
   url: string = 'url.com';
   tipoUsuario:FormControl;
+  title: string = 'Crear Usuario'
 
   constructor(private _db:DBService) {
     this.addUserForm = new FormGroup({

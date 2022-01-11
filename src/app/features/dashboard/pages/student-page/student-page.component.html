@@ -1,1 +1,9 @@
-<p>student-page works!</p>
+<app-hours></app-hours>
+<div class="boxSection">
+    <h3>Clases Disponibles</h3>
+    <app-class [data]='data' [admin]=false ></app-class>
+    <mat-divider></mat-divider>
+    <h3>Historial de Clases</h3>
+    <app-class-history [data]='history'></app-class-history>
+</div>
+<app-block-btn [text]='text' [url]='url' [btnText]='btnText'></app-block-btn>

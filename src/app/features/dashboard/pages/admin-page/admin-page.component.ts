@@ -3,7 +3,7 @@ import { Program } from '../../components/class/class.component';
 import { Report } from '../../components/last-tickets/last-tickets.component';
 import { Options } from '../../components/options/options.component';
 import { History } from '../../components/class-history/class-history.component';
-import { DBService } from '../../services/db.service';
+import { DBService } from '../../../../core/services/db.service';
 
 @Component({
   selector: 'app-admin-page',
@@ -40,15 +40,17 @@ export class AdminPageComponent implements OnInit {
       year: '2021' ,
       description:'Clase modalidad online'
     }
-  ]
+  ];
   report: Report[] = [
     {
       user: 'Usuario',
       date: 'dia del reporte',
       report: 'comentarios, motivos...'
     }
-  ]
-
+  ];
+  text: string = 'Lista de estudiantes';
+  url: string = 'lista-estudiantes';
+  btnText: string = 'Revisar'
 
   constructor(private _cService: DBService) { 
     this._cService.get("clase").subscribe( (data) => {

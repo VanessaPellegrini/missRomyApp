@@ -1,19 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { DBService } from '../../services/db.service';
-import { NewClass } from '../crear-clase/crear-clase.component';
-import { ActivatedRoute, Router } from '@angular/router';
-
+import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { ClassInterface } from 'src/app/core/interfaces/class.interface';
+import { DBService } from '../../../../core/services/db.service';
 
 @Component({
-  selector: 'app-update-class',
-  templateUrl: './update-class.component.html',
-  styleUrls: ['./update-class.component.css']
+  selector: 'app-crear-clase',
+  templateUrl: './crear-clase.component.html',
+  styleUrls: ['./crear-clase.component.css']
 })
-export class UpdateClassComponent implements OnInit {
-
-
-  myParam: any;
+export class CrearClaseComponent implements OnInit {
 
   addClassForm: FormGroup;
   asignature: FormControl;
@@ -23,12 +18,13 @@ export class UpdateClassComponent implements OnInit {
   group: FormControl;
   hour: FormControl;
   day: FormControl;
+  
   url: string = 'url.com';
+  title: string = 'Crear Clase';
+  btnText: string = 'CREAR';
 
   constructor(
-    private classService: DBService, 
-    private route: ActivatedRoute,
-    private _router: Router
+    private classService: DBService
   ) { 
     this.addClassForm = new FormGroup({
       asignature: this.asignature = new FormControl('', [Validators.required]),
@@ -42,13 +38,10 @@ export class UpdateClassComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.route.params.subscribe((params: any) => this.myParam = params['key']);
-    console.log(this.myParam);
-    
   }
 
   send(){
-    const data: NewClass = {
+    const data: ClassInterface = {
       asignature: this.asignature.value,
       teacher: this.teacher.value,
       link: this.link.value,
@@ -57,9 +50,8 @@ export class UpdateClassComponent implements OnInit {
       hour: this.hour.value,
       day: this.day.value
     }
-    this.classService.update("clase",data.asignature,data);
-    this._router.navigate(["dashboard"])
+    this.classService.create("clase", data.asignature, data);
+    this.addClassForm.reset();
   }
 
 }
-

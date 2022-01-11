@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
-import { SendMailService } from '../../services/send-mail.service';
+import { SendMailService } from '../../../../core/services/send-mail.service';
 
 interface Datos {
   name: string,

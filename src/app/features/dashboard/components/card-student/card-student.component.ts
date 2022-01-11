@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { DBService } from '../../services/db.service';
+import { DBService } from '../../../../core/services/db.service';
 
 export interface CardStudents {
   name: string,

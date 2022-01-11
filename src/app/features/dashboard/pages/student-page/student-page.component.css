@@ -1,0 +1,14 @@
+.boxSection {
+    margin: 1rem;
+    border: 2px solid var(--color-primary);
+    border-radius: 8px;
+}
+.boxSection h3 {
+    color: var(--color-primary);
+    font-weight: 600;
+    margin: 0;
+    padding: 0.5rem 1rem ;
+}
+.boxSection mat-divider {
+    background: var(--bg-primary);
+}

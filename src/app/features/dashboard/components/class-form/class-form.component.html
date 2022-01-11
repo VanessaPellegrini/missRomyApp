@@ -1,6 +1,3 @@
-<div class="box">
-    <h3>Crear Clase</h3>
-</div>
 <div class=formSection>
     <form class="form" [formGroup]="addClassForm">
         <mat-form-field appearance="outline" class="inputForm">
@@ -34,7 +31,7 @@
             <input matInput placeholder="Dia" [formControl]="day">
         </mat-form-field>
         <div>
-            <button class="btn" type="submit" (click)=send() mat-flat-button color="primary">Crear</button>
+            <button class="btn" type="submit" (click)=send() mat-flat-button color="primary">{{ btnText }}</button>
         </div>
     </form>
 </div>

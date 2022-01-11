@@ -11,11 +11,11 @@ const routes: Routes = [
       },
       { path: 'crear-clase', 
         loadChildren: () => 
-          import('./components/crear-clase/crear-clase.module').then((m) => m.CrearClaseModule)
+          import('./pages/crear-clase/crear-clase.module').then((m) => m.CrearClaseModule)
       },
       { path: 'crear-usuario', 
         loadChildren: () => 
-          import('./components/crear-usuario/crear-usuario.module').then((m) => m.CrearUsuarioModule)
+          import('./pages/crear-usuario/crear-usuario.module').then((m) => m.CrearUsuarioModule)
       },
       { path: 'lista-estudiantes', 
       loadChildren: () => 
@@ -23,8 +23,12 @@ const routes: Routes = [
       },
       { path: 'modificar-clase/:key', 
         loadChildren: () => 
-          import('./components/update-class/update-class.module').then((m) => m.UpdateClassModule)
-      }
+          import('./pages/update-class/update-class.module').then((m) => m.UpdateClassModule)
+      },
+      { path: 'seleccionar-clase', 
+      loadChildren: () => 
+        import('./pages/class-selector/class-selector.module').then((m) => m.ClassSelectorModule)
+    }
     ]
   },
 ];

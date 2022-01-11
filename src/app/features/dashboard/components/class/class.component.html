@@ -15,7 +15,7 @@
                 <p>Modalidad: {{ item.mode }}</p>
             </div>
         </div>
-        <div class="btnBox">
+        <div class="btnBox" *ngIf="admin">
             <button class="btn" mat-flat-button color="primary" (click)="updateClass(item.asignature)">Modificar</button>
             <button class="btn" mat-flat-button color="error" (click)="deleteClass(item.asignature)">
                 Eliminar

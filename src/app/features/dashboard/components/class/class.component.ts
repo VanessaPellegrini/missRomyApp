@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { DBService } from '../../services/db.service';
+import { DBService } from '../../../../core/services/db.service';
 import { Router } from '@angular/router';
 
 export interface Program {
@@ -16,6 +16,7 @@ export interface Program {
 })
 export class ClassComponent implements OnInit {
   @Input() data: any[]=[]
+  @Input() admin: boolean
   constructor(private _cService: DBService, private _router:Router) {
   }
 
